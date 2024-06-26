@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import pickle
+from itertools import combinations
 
 def printText(t):
   st.markdown(
@@ -198,8 +199,6 @@ def show():
     st.write(unique_answer_types)
     
     printText("Pode haver mais de um tipo de reposta para cada pergunta.")
-    
-    from itertools import combinations
     
     def get_answer_type_combinations(json_data):
         questions = json_data
